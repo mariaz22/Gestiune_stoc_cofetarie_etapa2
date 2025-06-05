@@ -1,4 +1,4 @@
-# Gestiune_Stoc_Cofetarie_etapa1
+# Gestiune_Stoc_Cofetarie_etapa2
 
 ## Lista de actiuni ale aplicatiei (etapa 1):
     1.recomandare produse pentru client (meniu client)
