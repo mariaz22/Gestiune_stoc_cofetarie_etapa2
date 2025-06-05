@@ -3,6 +3,7 @@ package model;
 import java.time.LocalDate;
 
 public abstract class Ingredient {
+    protected int id;
     protected String nume;
     protected double cantitate;
     protected UnitateMasura unitateMasura;
@@ -18,6 +19,10 @@ public abstract class Ingredient {
         this.pretPerUnitate = pretPerUnitate;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public String getNume() {
         return nume;
     }
@@ -25,6 +30,15 @@ public abstract class Ingredient {
     public double getCantitate() {
         return cantitate;
     }
+
+    public LocalDate getDataExpirare() {
+        return dataExpirare;
+    }
+
+    public double getPretPerUnitate() {
+        return pretPerUnitate;
+    }
+
 
     public UnitateMasura getUnitateMasura() {
         return unitateMasura;
@@ -41,6 +55,31 @@ public abstract class Ingredient {
     public boolean areSuficient(double valoare) {
         return cantitate >= valoare;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+
+    public void setCantitate(double cantitate) {
+        this.cantitate = cantitate;
+    }
+
+    public void setUnitateMasura(UnitateMasura unitateMasura) {
+        this.unitateMasura = unitateMasura;
+    }
+
+    public void setDataExpirare(LocalDate dataExpirare) {
+        this.dataExpirare = dataExpirare;
+    }
+
+    public void setPretPerUnitate(double pretPerUnitate) {
+        this.pretPerUnitate = pretPerUnitate;
+    }
+
 
     public void adaugaCantitate(double valoare) {
         if (valoare > 0) {

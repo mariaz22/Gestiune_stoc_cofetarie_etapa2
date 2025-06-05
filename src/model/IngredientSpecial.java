@@ -24,6 +24,22 @@ public class IngredientSpecial extends Ingredient {
         return "special";
     }
 
+    public int getTimpPreparare() {
+        return timpPreparare;
+    }
+
+    public boolean getEsteProdusIntern() {
+        return esteProdusIntern;
+    }
+
+    public void setTimpPreparare(int timpPreparare) {
+        this.timpPreparare = timpPreparare;
+    }
+
+    public void setEsteProdusIntern(boolean esteProdusIntern) {
+        this.esteProdusIntern = esteProdusIntern;
+    }
+
     public void afiseazaIngredienteComponente() {
         System.out.println("Ingrediente componente pentru " + nume + ":");
         for (Ingredient i : ingredienteComponente) {

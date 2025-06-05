@@ -4,14 +4,14 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Tort extends Produs {
-    private String tipBlat;
-    private String tipGlazura;
-    private String eveniment;
+    private TipBlat tipBlat;
+    private TipGlazura tipGlazura;
+    private Eveniment eveniment;
     private int portii;
 
     public Tort(int id, String nume, double pret, int cantitate, List<Ingredient> ingrediente,
                 LocalDate dataExpirare, double gramaj, int calorii, Categorie categorie, boolean esteVegan,
-                String tipBlat, String tipGlazura, String eveniment, int portii) {
+                TipBlat tipBlat, TipGlazura tipGlazura, Eveniment eveniment, int portii) {
         super(id, nume, pret, cantitate, ingrediente, dataExpirare, gramaj, calorii, categorie, esteVegan);
         this.tipBlat = tipBlat;
         this.tipGlazura = tipGlazura;
@@ -41,15 +41,15 @@ public class Tort extends Produs {
     }
 
 
-    public String getTipBlat() {
+    public TipBlat getTipBlat() {
         return tipBlat;
     }
 
-    public String getTipGlazura() {
+    public TipGlazura getTipGlazura() {
         return tipGlazura;
     }
 
-    public String getEveniment() {
+    public Eveniment getEveniment() {
         return eveniment;
     }
 

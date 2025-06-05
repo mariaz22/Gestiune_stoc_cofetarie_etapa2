@@ -4,13 +4,13 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Fursec extends Produs {
-    private String aroma;
-    private String tipUmplutura;
+    private Aroma aroma;
+    private TipUmplutura tipUmplutura;
     private boolean glazurat;
 
     public Fursec(int id, String nume, double pret, int cantitate, List<Ingredient> ingrediente,
                   LocalDate dataExpirare, double gramaj, int calorii, Categorie categorie, boolean esteVegan,
-                  String aroma, String tipUmplutura, boolean crocant, boolean glazurat) {
+                  Aroma aroma, TipUmplutura tipUmplutura, boolean glazurat) {
         super(id, nume, pret, cantitate, ingrediente, dataExpirare, gramaj, calorii, categorie, esteVegan);
         this.aroma = aroma;
         this.tipUmplutura = tipUmplutura;
@@ -37,11 +37,11 @@ public class Fursec extends Produs {
         VANILIE
     }
 
-    public String getAroma() {
+    public Aroma getAroma() {
         return aroma;
     }
 
-    public String getTipUmplutura() {
+    public TipUmplutura getTipUmplutura() {
         return tipUmplutura;
     }
 

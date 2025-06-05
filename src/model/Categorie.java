@@ -2,9 +2,7 @@ package model;
 
 public enum Categorie {
     TORT,
-    PRAJITURA,
+    BOMBOANA,
     FURSEC,
-    TARTA,
-    CHEC,
-    DULCIURI
+    PATISERIE
 }

@@ -42,6 +42,7 @@ public class Patiserie extends Produs {
         return "Patiserie";
     }
 
+
     @Override
     public String toString() {
         return super.toString() +

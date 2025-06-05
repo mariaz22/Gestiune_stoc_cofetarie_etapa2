@@ -10,8 +10,8 @@ public abstract class Produs {
     protected int cantitate;
     protected List<Ingredient> ingrediente;
     protected LocalDate dataExpirare;
-    protected double gramaj; // per bucată
-    protected int calorii;   // per bucată
+    protected double gramaj;
+    protected int calorii;
     protected Categorie categorie;
     protected boolean esteVegan;
 
@@ -60,10 +60,27 @@ public abstract class Produs {
     public boolean isVegan() { return esteVegan; }
 
     // Setters
+    public void setId(int id) {this.id = id; }
     public void setCantitate(int cantitate) { this.cantitate = cantitate; }
     public void setPret(double pret) { this.pret = pret; }
     public void setCalorii(int calorii) { this.calorii = calorii; }
     public void setVegan(boolean esteVegan) { this.esteVegan = esteVegan; }
+    public void setNume(String nume) {
+        this.nume = nume;
+    }
+    public void setDataExpirare(LocalDate dataExpirare) {
+        this.dataExpirare = dataExpirare;
+    }
+    public void setGramaj(double gramaj) {
+        this.gramaj = gramaj;
+    }
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
+
+
+
+
 
     public boolean contineIngredient(String numeIngredient) {
         return ingrediente.stream()

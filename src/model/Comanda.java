@@ -7,7 +7,7 @@ import java.util.Map;
 public class Comanda {
     private static int counter = 0;
     private int idComanda;
-    private Client client;
+    private int idClient;
     private Map<Produs, Integer> listaProduse;
     private LocalDate dataPlasare;
     private StatusComanda status;
@@ -18,9 +18,9 @@ public class Comanda {
         ANULATA
     }
 
-    public Comanda(Client client) {
+    public Comanda(int idClient) {
         this.idComanda = ++counter;
-        this.client = client;
+        this.idClient = idClient;
         this.listaProduse = new HashMap<>();
         this.dataPlasare = LocalDate.now();
         this.status = StatusComanda.IN_ASTEPTARE;
@@ -30,8 +30,8 @@ public class Comanda {
         return idComanda;
     }
 
-    public Client getClient() {
-        return client;
+    public int getIdClient() {
+        return idClient;
     }
 
     public void modificaStatus(StatusComanda noulStatus) {
@@ -68,17 +68,6 @@ public class Comanda {
         return total;
     }
 
-    public void exportFactura() {
-        System.out.println("Factura pentru comanda #" + idComanda);
-        System.out.println("Client: " + client.getNume());
-        System.out.println("Data plasare: " + dataPlasare);
-        System.out.println("Produse:");
-        for (Map.Entry<Produs, Integer> entry : listaProduse.entrySet()) {
-            System.out.println("- " + entry.getKey().getNume() + " x " + entry.getValue());
-        }
-        System.out.printf("Total: %.2f RON%n", calculeazaTotal());
-        System.out.println("Status: " + status);
-    }
 
     public void finalizeazaComanda() {
         this.status = StatusComanda.FINALIZATA;
@@ -88,6 +77,6 @@ public class Comanda {
 
     @Override
     public String toString() {
-        return "Comanda #" + idComanda + " - " + client.getNume() + " | Status: " + status;
+        return "Comanda #" + idComanda + " | Id client: " + idClient + " | Status: " + status;
     }
 }
