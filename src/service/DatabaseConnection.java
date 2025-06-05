@@ -16,7 +16,6 @@ public class DatabaseConnection {
         try {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Conectat la baza de date");
         } catch (SQLException | ClassNotFoundException e) {
             System.out.println("Eroare la conectarea la baza de date: " + e.getMessage());
         }
